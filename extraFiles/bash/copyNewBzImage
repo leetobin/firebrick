@@ -1,0 +1,3 @@
+sudo mount /dev/sdb1 ~/usb/
+sudo cp ~/buildroot/output/images/bzImage ~/usb/bzImage
+sudo umount ~/usb

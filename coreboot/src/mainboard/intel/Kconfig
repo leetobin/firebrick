@@ -1,0 +1,47 @@
+if VENDOR_INTEL
+
+choice
+	prompt "Mainboard model"
+
+config BOARD_INTEL_D810E2CB
+	bool "D810E2CB"
+config BOARD_INTEL_D945GCLF
+	bool "D945GCLF"
+config BOARD_INTEL_EAGLEHEIGHTS
+	bool "EagleHeights"
+config BOARD_INTEL_EMERALDLAKE2
+	bool "Emerald Lake 2 CRB"
+config BOARD_INTEL_JARRELL
+	bool "Jarrell (SE7520JR2)"
+config BOARD_INTEL_MTARVON
+	bool "3100 devkit (Mt. Arvon)"
+config BOARD_INTEL_TRUXTON
+	bool "EP80579 devkit (Truxton)"
+config BOARD_INTEL_XE7501DEVKIT
+	bool "XE7501devkit"
+config BOARD_INTEL_BASKING_RIDGE
+	bool "Basking Ridge CRB"
+config BOARD_INTEL_WTM1
+	bool "Whitetip Mountain 1 CRB"
+config BOARD_INTEL_WTM2
+	bool "Whitetip Mountain 2 CRB"
+
+endchoice
+
+source "src/mainboard/intel/d810e2cb/Kconfig"
+source "src/mainboard/intel/d945gclf/Kconfig"
+source "src/mainboard/intel/eagleheights/Kconfig"
+source "src/mainboard/intel/emeraldlake2/Kconfig"
+source "src/mainboard/intel/baskingridge/Kconfig"
+source "src/mainboard/intel/jarrell/Kconfig"
+source "src/mainboard/intel/mtarvon/Kconfig"
+source "src/mainboard/intel/truxton/Kconfig"
+source "src/mainboard/intel/xe7501devkit/Kconfig"
+source "src/mainboard/intel/wtm1/Kconfig"
+source "src/mainboard/intel/wtm2/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "Intel"
+
+endif # VENDOR_INTEL

@@ -1,0 +1,1 @@
+sudo flashrom -w ~/coreboot/build/coreboot.rom -n -p serprog:dev=/dev/ttyUSB0:2000000

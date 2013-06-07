@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CRYPTSETUP
+	bool "cryptsetup"
+	help
+		Setup virtual encryption devices under dm-crypt Linux
+
+		https://code.google.com/p/cryptsetup/

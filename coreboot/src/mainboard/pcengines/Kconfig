@@ -1,0 +1,22 @@
+if VENDOR_PCENGINES
+
+choice
+	prompt "Mainboard model"
+
+config BOARD_PCENGINES_ALIX1C
+	bool "ALIX.1C"
+config BOARD_PCENGINES_ALIX2D
+	bool "ALIX.2D2 or 2D3"
+config BOARD_PCENGINES_ALIX6
+	bool "ALIX.6"
+
+endchoice
+
+source "src/mainboard/pcengines/alix1c/Kconfig"
+source "src/mainboard/pcengines/alix2d/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "PC Engines"
+
+endif # VENDOR_PCENGINES

@@ -1,0 +1,10 @@
+config CPU_SAMSUNG_EXYNOS5
+	depends on ARCH_ARMV7
+	select HAVE_UART_SPECIAL
+	select DEFAULT_EARLY_CONSOLE
+	bool
+	default n
+
+if CPU_SAMSUNG_EXYNOS5
+source src/cpu/samsung/exynos5250/Kconfig
+endif

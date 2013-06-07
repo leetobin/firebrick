@@ -1,0 +1,1 @@
+qemu-system-i386 -bios /home/lee/emucoreboot/build/coreboot.rom -curses

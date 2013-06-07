@@ -1,0 +1,17 @@
+if VENDOR_TRAVERSE
+
+choice
+	prompt "Mainboard model"
+
+config BOARD_TRAVERSE_GEOS
+	bool "Geos"
+
+endchoice
+
+source "src/mainboard/traverse/geos/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "Traverse Technologies"
+
+endif # VENDOR_TRAVERSE

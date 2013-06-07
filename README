@@ -1,0 +1,37 @@
+Firebrick
+---
+
+Software for the open source hardware write-blocker/imager.
+
+FIREBrick features:
+*Autonomous disk imaging at speeds of up to 5Gb per minute (disk dependent)
+*FireWire write blocker function
+*Stand-alone version supports storage mirroring and encryption
+*Portable – fits in a small HTPC case, including display
+*Free, open source firmware
+*Can be fully customized to the needs of specific departments
+*Adheres to NIST Computer Forensic Tool Testing protocols
+
+To build a FIREBrick you need:
+
+*AsRock E350M1 Motherboard
+*2Gb DDR3 Desktop RAM (1333 or 1066)
+*Dynamode PCIX3FW 3-Port Firewire PCIe
+*An LCD2USB 20×4 display. You can buy it from Lcdmodkit or you can make one yourself according to these instructions.
+*At least three SATA cables – two for the internal RAIDed drives + one long SATA cable for connecting FIREBrick to the target.
+*You will need a case of your choice that fits a mini-ITX (pretty much any case) and a PSU with at least three SATA Power connectors (200W is quite enough).
+
+Note: You will also need two equal-sized HDDs for internal RAID array storage.
+
+For more info visit http://digitalfire.ucd.ie/?page_id=1011
+
+Lee Tobin - leetobin@gmail.com
+
+Address 
+Room A1.10
+UCD School of Computer Science
+University College Dublin
+Belfield, Dublin 4, Ireland
+
+dfire@ucd.ie
+@dfirelabs

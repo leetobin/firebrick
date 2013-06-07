@@ -1,0 +1,19 @@
+#! /bin/sh
+#
+
+case "$1" in
+	start|"")
+		sleep 3 #needed for configfs to wake up
+		;;
+	stop)
+		lcd c
+		#lcd g 1 2 ; lcd p "   Power down"
+		;;
+	restart|reload)
+		lcd c
+		lcd g 1 2 ; lcd p "   Restarting..."
+		;;
+	*)
+		exit 1
+		;;
+esac

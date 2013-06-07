@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBEWF
+	bool "libewf"
+	help
+          Libewf is a library to access the Expert Witness Compression Format (EWF).
+
+          https://code.google.com/p/libewf/

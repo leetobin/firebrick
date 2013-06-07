@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# Firebrick 
+# 
+
+
+lcd c
+lcd g 0 0 ; lcd p "1. Export"
+lcd g 0 1 ; lcd p "2. Initialise"
+lcd g 0 2 ; lcd p "3. Back" 
+  
+stty raw; read -n 1 key; stty -raw
+lcd c
+case "$key" in
+	1)
+		sh exportStore.sh 
+		;;
+	2) 	
+		sh initStore.sh 
+		;;
+	*)
+		
+esac
