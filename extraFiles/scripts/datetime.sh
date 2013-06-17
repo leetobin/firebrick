@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 # Firebrick 
-# 
+#
+
 newdate=''
 newtime=''
 while [ "$key" != "3" ]; do

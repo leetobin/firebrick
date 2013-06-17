@@ -146,11 +146,13 @@
 /dev/video	c	666	0	0	81	0	0	1	4
 
 #Make node for LCD screen | info in/sys/bus/usb/devices/ (4-5)
+# Dont need these now with dynamic node creation in scripts
+# last edit 17/06/2013 - Lee Tobin
 #for Stock bios
 #/dev/bus/usb/004/		d	755	0	0	-	-	- 
 #/dev/bus/usb/004/003	c	666	0	0	189	386	0	0	-
 #for Coreboot
-/dev/bus/usb/003/		d	755	0	0	-	-	- 
-/dev/bus/usb/003/003	c	666	0	0	189	258	0	0	-
+#/dev/bus/usb/003/		d	755	0	0	-	-	- 
+#/dev/bus/usb/003/003	c	666	0	0	189	258	0	0	-
 
 /dev/md0p1	b	666	0	0	259	0	0	0	-

@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Firebrick Main menu
-# 
+# last edit 17/06/2013 - Lee Tobin
 
 while [ "$key" != "4" ]; do
 	lcd c
@@ -20,7 +20,7 @@ while [ "$key" != "4" ]; do
 			sh storage.sh 
 			;;
 		3)
-			sh writeblock.sh 
+			sh evidenceRO.sh 
 			;;
 		4)
 			poweroff

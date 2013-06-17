@@ -1,3 +1,8 @@
+#!/bin/sh
+#
+# Firebrick build postbuild script
+# last edit 17/06/2013 - Lee Tobin
+
 #Add tty0 to secure shell access
 if grep -F 'tty0' output/target/etc/securetty ; then
 	echo 'tty0 line present not adding...'
