@@ -53,9 +53,9 @@ export storageDisk2=$(ls -la /sys/block | grep ata. | grep host3 | grep -o sd. |
 # check if /dev/sda and /dev/sdb are present and the same size
 if [[ ${#storageDisk1} -gt 2  &&  ${#storageDisk2} -gt 2 ]] ; then
 	export storageDevice="/dev/md0"
-elif test -d "/sys/block/$storageDisk1" ; then
+elif [ ${#storageDisk1} -gt 2 ] ; then
 	export storageDevice="/dev/${storageDisk1}"
-elif test -d "/sys/block/$storageDisk2" ; then
+elif [ ${#storageDisk2} -gt 2 ] ; then
 	export storageDevice="/dev/${storageDisk2}"	
 #No disks!!!
 else
