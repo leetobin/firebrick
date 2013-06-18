@@ -3,9 +3,6 @@
 # Firebrick main script
 # last edit 17/06/2013 - Lee Tobin
 
-lcd c
-lcd o 190
-
 #lcd g 0 1; lcd p "FIRE Brick v1.0"
 #lcd g 0 2; lcd p "http://dfire.ucd.ie/"
 
@@ -42,6 +39,10 @@ if [ ! -e $lcdnode ] ; then
 
 		#make the device node
 		mknod $lcdnode c $majnum $minnum
+		
+		lcd c
+		lcd o 190
+		
 		cd /scripts
 	fi
 fi
