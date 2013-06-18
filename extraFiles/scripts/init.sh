@@ -16,8 +16,9 @@ IFS=' '
 set --  $lcdnodeinfo
 lcdnodedir=/dev/bus/usb/$2
 lcdnode=$lcdnodedir/${4%?}
+echo Found LCD on $lcdnode
 
-if ! test -f $lcdnode; then 
+if [ ! -e $lcdnode ] ; then 
 
 	if [ ! -d $lcdnodedir ]; then
 		#create dev dir
