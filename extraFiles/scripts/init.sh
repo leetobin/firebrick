@@ -3,10 +3,8 @@
 # Firebrick main script
 # last edit 17/06/2013 - Lee Tobin
 
-#lcd g 0 1; lcd p "FIRE Brick v1.0"
-#lcd g 0 2; lcd p "http://dfire.ucd.ie/"
-
 #--- Check the LCD device nodes
+
 #Get LCD location on USB bus
 lcdnodeinfo=$(lsusb | grep 0403:c630)
 IFS=' '
