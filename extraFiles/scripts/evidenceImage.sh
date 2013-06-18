@@ -3,7 +3,7 @@
 # image <source> <evidence dir> <evidence file no extension>
 # last edit 17/06/2013 - Lee Tobin
 
-checkDest=$(mount | grep md0p1)
+checkDest=$(mount | grep firestor)
 if [ "$checkDest" == "" ] 
 then
   lcd c
@@ -21,7 +21,7 @@ lcd c
 lcd g 0 0 ; lcd p "Imaging..."
 lcd g 0 1 ; lcd p "ESC to Stop"
 
-dcfldd if=/dev/sdc conv=noerror statusinterval=2048 hash=md5 split=256M of="$2/$3" hashlog="$2/hashlog.log" 2>&1 | tr -d "()ocwriten." | lcd j 0 3
+dcfldd if=/dev/$evidenceDisk conv=noerror statusinterval=2048 hash=md5 split=256M of="$2/$3" hashlog="$2/hashlog.log" 2>&1 | tr -d "()ocwriten." | lcd j 0 3
 
 imghash=$(tail -n 1 "$2/hashlog.log" | grep -o "[0-9a-f]*" | tail -n 1)
 

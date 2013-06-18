@@ -56,7 +56,7 @@ output/host/usr/bin/x86_64-buildroot-linux-uclibc-gcc -I output/staging/usr/incl
 output/host/usr/bin/x86_64-buildroot-linux-uclibc-gcc -o output/target/usr/bin/setmax ../setmax/setmax.c
 
 #Add this dir to filesystem
-if ! test -d output/target/md0p1 ; then mkdir output/target/md0p1 ; fi
+if ! test -d output/target/firestor ; then mkdir output/target/firestor ; fi
 if ! test -d output/target/scripts ; then 
 mkdir output/target/scripts
 fi

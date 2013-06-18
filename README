@@ -11,6 +11,7 @@ FIREBrick features:
 *Free, open source firmware
 *Can be fully customized to the needs of specific departments
 *Adheres to NIST Computer Forensic Tool Testing protocols
+*Automatic RAID storage detection
 
 To build a FIREBrick you need:
 
@@ -18,10 +19,8 @@ To build a FIREBrick you need:
 *2Gb DDR3 Desktop RAM (1333 or 1066)
 *Dynamode PCIX3FW 3-Port Firewire PCIe
 *An LCD2USB 20×4 display. You can buy it from Lcdmodkit or you can make one yourself according to these instructions.
-*At least three SATA cables – two for the internal RAIDed drives + one long SATA cable for connecting FIREBrick to the target.
-*You will need a case of your choice that fits a mini-ITX (pretty much any case) and a PSU with at least three SATA Power connectors (200W is quite enough).
 
-Note: You will also need two equal-sized HDDs for internal RAID array storage.
+Note: If you want to use RAID storage, you will also need two equal-sized HDDs. 
 
 For more info visit http://digitalfire.ucd.ie/?page_id=1011
 

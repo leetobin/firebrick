@@ -20,7 +20,7 @@ while [ "$key" != "4" ]; do
 			sh storage.sh 
 			;;
 		3)
-			sh evidenceRO.sh 
+			sh evidence.sh 
 			;;
 		4)
 			poweroff
