@@ -20,14 +20,12 @@ if [[ ${#storageDisk1} -gt 2  &&  ${#storageDisk2} -gt 2 ]] ; then
 			lcd c
 			lcd g 0 1; lcd p "Initialising RAID..." 
 			yes | mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/$storageDisk1 /dev/$storageDisk2
-			sleep 1
+			sleep 1 #todo: find a better workaround.
 			#create a new partition
 			(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/md0
 			sleep 1
 			mkfs.vfat -n firestor /dev/md0p1
 			sleep 1
-			
-			#mount /dev/md0p1 /md0p1 
 		fi
 	else
 		lcd c
@@ -38,7 +36,7 @@ if [[ ${#storageDisk1} -gt 2  &&  ${#storageDisk2} -gt 2 ]] ; then
 	fi 
 
 #Single disk storage
-elif test -d "/sys/block/$storageDisk1" ; then
+elif [ ${#storageDisk1} -gt 2 ]; then
 	# initialise it
 	lcd c
 	lcd g 0 0 ; lcd p "Are you sure?"
@@ -51,11 +49,10 @@ elif test -d "/sys/block/$storageDisk1" ; then
 		#create a new partition
 		(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/$storageDisk1
 		mkfs.vfat -n firestor "/dev/${storageDisk1}1"
-		
 	fi
 
 #Single disk storage
-elif test -d "/sys/block/$storageDisk2" ; then
+elif [ ${#storageDisk2} -gt 2 ] ; then
 
 	# initialise it
 	lcd c
@@ -69,6 +66,5 @@ elif test -d "/sys/block/$storageDisk2" ; then
 		#create a new partition
 		(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/$storageDisk2
 		mkfs.vfat -n firestor "/dev/${storageDisk2}1"
-		
 	fi
 fi
