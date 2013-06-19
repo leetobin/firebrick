@@ -15,10 +15,10 @@ FIREBrick features:
 
 To build a FIREBrick you need:
 
-*AsRock E350M1 Motherboard
-*2Gb DDR3 Desktop RAM (1333 or 1066)
+*ASRock E350M1 Motherboard
+*1Gb DDR3 Desktop RAM (1333 or 1066)
 *Dynamode PCIX3FW 3-Port Firewire PCIe
-*An LCD2USB 20×4 display. You can buy it from Lcdmodkit or you can make one yourself according to these instructions.
+*An LCD2USB 20×4 display. You can buy it from Lcdmodkit or you can make one yourself.
 
 Note: If you want to use RAID storage, you will also need two equal-sized HDDs. 
 
@@ -37,10 +37,11 @@ dfire@ucd.ie
 
 To get developing:
 ---
+Firstly, you'll need a dev environment. Any linux distro with a good set of build tools will do (make, gcc, g++, etc...).
 
 Clone the repo
 	git clone https://github.com/leetobin/firebrick.git 
-	(this should create a firebrick directory with source files)
+	(this should create a "firebrick" directory containing the source files)
 
 Build buildroot et al.
 	cd firebrick/buildroot
@@ -50,4 +51,6 @@ Build coreboot with the firebrick kernel+initfs as payload
 	cd (../../)firebrick/coreboot
 	make (and wait about 5mins)
 
-Then you can flash your new coreboot bios file (firebrick/coreboot/build/coreboot.com) into the Asrock motherboard
+Then you can flash your new coreboot BIOS file (firebrick/coreboot/build/coreboot.com) into your ASRock motherboard
+
+Alternatively, you could just flash the ROM file that's in this repository  (firebrick/coreboot/build/coreboot.com) to the motherboard.
