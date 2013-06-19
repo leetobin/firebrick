@@ -36,7 +36,7 @@ if [[ ${#storageDisk1} -gt 2  &&  ${#storageDisk2} -gt 2 ]] ; then
 	fi 
 
 #Single disk storage
-elif [ ${#storageDisk1} -gt 2 ]; then
+elif [ ${#storageDisk1} -gt 2 ] ; then
 	# initialise it
 	lcd c
 	lcd g 0 0 ; lcd p "Are you sure?"
