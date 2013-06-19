@@ -17,7 +17,7 @@ if [ ! -e $lcdnode ] ; then
 
 	if [ ! -d $lcdnodedir ]; then
 		#create dev dir
-		mkdir $lcdnodedir
+		mkdir -p $lcdnodedir
 	fi
 	#if test -f output/target/etc/init.d/S40network; then rm output/target/etc/init.d/S40network ; fi
 	if [ ! -f $lcdnode ]; then
