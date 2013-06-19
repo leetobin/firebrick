@@ -1017,7 +1017,7 @@ endif
 ifneq "$(HOSTARCH)" "x86_64"
 /home/lee/firebrick/buildroot/output/build/buildroot-config/auto.conf: FORCE
 endif
-ifneq "$(BR2_VERSION_FULL)" "2013.05-git-ge94747a"
+ifneq "$(BR2_VERSION_FULL)" "2013.05-git-g8551a66"
 /home/lee/firebrick/buildroot/output/build/buildroot-config/auto.conf: FORCE
 endif
 

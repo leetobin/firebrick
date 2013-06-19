@@ -34,3 +34,20 @@ Belfield, Dublin 4, Ireland
 
 dfire@ucd.ie
 @dfirelabs
+
+To get developing:
+---
+
+Clone the repo
+	git clone https://github.com/leetobin/firebrick.git 
+	(this should create a firebrick directory with source files)
+
+Build buildroot et al.
+	cd firebrick/buildroot
+	make (and wait about 25mins)
+
+Build coreboot with the firebrick kernel+initfs as payload
+	cd (../../)firebrick/coreboot
+	make (and wait about 5mins)
+
+Then you can flash your bios into the Asrock motherboard
