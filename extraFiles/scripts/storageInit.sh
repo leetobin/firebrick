@@ -20,10 +20,11 @@ if [[ ${#storageDisk1} -gt 2  &&  ${#storageDisk2} -gt 2 ]] ; then
 			lcd c
 			lcd g 0 1; lcd p "Initialising RAID..." 
 			yes | mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/$storageDisk1 /dev/$storageDisk2
-			sleep 1 #todo: find a better workaround.
+			sleep 1 #todo: find a better workaround to address this issue
 			#create a new partition
 			(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/md0
 			sleep 1
+			#make a FAT fs on first RAID partition
 			mkfs.vfat -n firestor /dev/md0p1
 			sleep 1
 		fi
@@ -48,6 +49,7 @@ elif [ ${#storageDisk1} -gt 2 ] ; then
 		
 		#create a new partition
 		(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/$storageDisk1
+		#make a FAT fs on first disk partition
 		mkfs.vfat -n firestor "/dev/${storageDisk1}1"
 	fi
 
@@ -65,6 +67,7 @@ elif [ ${#storageDisk2} -gt 2 ] ; then
 		
 		#create a new partition
 		(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/$storageDisk2
+		#make a FAT fs on first disk partition
 		mkfs.vfat -n firestor "/dev/${storageDisk2}1"
 	fi
 fi
