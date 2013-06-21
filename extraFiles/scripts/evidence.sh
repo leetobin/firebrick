@@ -10,6 +10,7 @@ then
 	export evidenceDisk=$(ls -la /sys/block | grep ata. | grep host0 | grep -o sd. | tail -1)
 	#Export the evidence drive
 	sh evidenceExport.sh
+	#If there is storage then bring up the imaging menu, else just export over FW
 	if [[ ${#storageDevice} -gt 2 ]] ; then
 	
 		#if RAID not assembled, RAID assemble!
@@ -39,6 +40,7 @@ then
 			case $key in
 			1)
 				evidenceID=''
+				#check that the ID is unique on storage disk
 				while [ "$evidenceID" == "" ]
 				do
 				lcd c
