@@ -9,7 +9,7 @@ trap 'echo "Trapped"; stty intr "" ;exit 1' INT
 lcd c
 lcd g 0 0 ; lcd p "Verifying..."
 lcd g 0 1 ; lcd p "ESC to Stop"
-./verify_feed.sh $1/$2 | md5sum > verify.res
+./evidenceVerifyFeed.sh $1/$2 | md5sum > verify.res
 read hash <verify.res
 if [ "$hash"="$3" ] ; then
    stty intr ''

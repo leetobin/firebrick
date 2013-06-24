@@ -6,12 +6,12 @@
 checkDest=$(mount | grep firestor)
 if [ "$checkDest" == "" ] 
 then
-  lcd c
-  lcd g 0 1; lcd p "Storage isn't"
-  lcd g 0 2; lcd p "initialised"
-  sleep 2
-  lcd c
-  exit 1
+	lcd c
+	lcd g 0 1; lcd p "Storage isn't"
+	lcd g 0 2; lcd p "initialised"
+	sleep 2
+	lcd c
+	exit 1
 fi
 
 stty intr '^['
@@ -29,4 +29,3 @@ echo $imghash
 
 stty intr ''
 exit 0
-

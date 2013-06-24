@@ -5,7 +5,7 @@
 
 #assemble drives
 
-if [ $storageDevice -eq "/dev/md0" ] ; then
+if [[ $storageDevice == "/dev/md0" ]] ; then
 	mdadm --assemble /dev/md0 /dev/$storageDisk1 /dev/$storageDisk2
 	fdisk -l
 	sleep 3

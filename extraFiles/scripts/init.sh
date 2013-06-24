@@ -14,6 +14,10 @@ lcdnodedir=/dev/bus/usb/$2
 lcdnode=$lcdnodedir/${4%?}
 echo Found LCD on $lcdnode
 
+#alias tweaks
+#remove the human readable flag
+alias df='df'
+
 if [ ! -e $lcdnode ] ; then 
 
 	if [ ! -d $lcdnodedir ]; then

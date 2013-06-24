@@ -54,3 +54,7 @@ Build coreboot with the firebrick kernel+initfs as payload
 Then you can flash your new coreboot BIOS file (firebrick/coreboot/build/coreboot.com) into your ASRock motherboard
 
 Alternatively, you could just flash the ROM file that's in this repository  (firebrick/coreboot/build/coreboot.com) to the motherboard.
+
+Discalimer:
+--
+This system is in development, any loss of data/evidence or any related problems are not the fault of this project or DigialFIRE. We're confident in this project, but we're only human. Also, we're adding functionality to the FIREBrick all the time, so again, test your FIREBrick lots (particularly if you've developed new functionality).
