@@ -22,9 +22,18 @@ then
 		fi
 
 		#mount the storage
-		echo mounting "${storageDevice}1" on /firestor
-		mount "${storageDevice}1"  /firestor
+		if [[ $storageDevice == "/dev/md0" ]] ; then
+			#if RAID
+			echo mounting "/dev/md0p1" on /firestor
+			mount /dev/md0p1  /firestor
+		else
+			#mount single disk
+			echo mounting "${storageDevice}1" on /firestor
+			mount "${storageDevice}1"  /firestor
+		fi
+		
 		sleep 1
+		
 		
 		trap 'echo "ignoring"' INT
 

@@ -19,7 +19,7 @@ if [[ ${#storageDisk1} -gt 2  &&  ${#storageDisk2} -gt 2 ]] ; then
 
 			lcd c
 			lcd g 0 1; lcd p "Initialising RAID..." 
-			yes | mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/$storageDisk1 /dev/$storageDisk2
+			yes | mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/$storageDisk1 /dev/$storageDisk2
 			sleep 1 #todo: find a better workaround to address this issue
 			#create a new partition
 			(echo o; echo n; echo p; echo 1; echo 1; echo; echo t; echo c; echo w) | fdisk /dev/md0
