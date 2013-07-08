@@ -35,6 +35,7 @@ Belfield, Dublin 4, Ireland
 dfire@ucd.ie
 @dfirelabs
 
+
 To get developing:
 ---
 Firstly, you'll need a dev environment. Any linux distro with a good set of build tools will do (make, gcc, g++, etc...).
@@ -55,10 +56,26 @@ Build coreboot with the firebrick kernel+initfs as payload
 	cd (../../)firebrick/coreboot
 	make (and wait about 5mins)
 
-Then you can flash your new coreboot BIOS file into your ASRock motherboard
+Then you can flash your new coreboot BIOS file into your ASRock motherboard.
 
 Alternatively, you could just flash the ROM file that's in this repository  (firebrick/coreboot/build/coreboot.com) to the motherboard.
 
+
+Emulation for testing
+---
+
+We've also added an "emuboot" folder to the repository, it will allow you to use QEMU to test your new coreboot/payload ROM. 
+
+To do this you will need an emulator (QEMU), here's how...
+
+After you have completed the steps above, build coreboot (Emulated) with the firebrick kernel+initfs as payload
+	cd (../../)firebrick/emuboot
+	make (and wait about 2mins)
+
+Run the emulator:
+	./emu.sh
+
+	
 To flash the ROM into your BIOS:
 ---
 
@@ -90,6 +107,7 @@ https://github.com/leetobin/firebrick/blob/master/buildroot/output/images/bzImag
 4. Flash the BIOS using flashrom ( flashrom -p internal -w coreboot.rom )
 
 It's probably a good idea to save a copy of the stock BIOS ( flashrom -p internal -r stock.rom )
+
 
 Discalimer:
 --
