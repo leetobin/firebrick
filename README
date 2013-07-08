@@ -47,13 +47,13 @@ Build buildroot et al.
 	cd firebrick/buildroot
 	make (and wait about 25mins)
 
-Build coreboot with the firebrick kernel+initfs as payload
-	cd (../../)firebrick/coreboot
-	make (and wait about 5mins)
-	
 Make an ELF payload from the Kernel+Filesystem
 	cd (../../)extraFiles
 	./mkelfImage --append="console=ttyS0,115200" ../buildroot/output/images/bzImage ../linux.elf
+
+Build coreboot with the firebrick kernel+initfs as payload
+	cd (../../)firebrick/coreboot
+	make (and wait about 5mins)
 
 Then you can flash your new coreboot BIOS file into your ASRock motherboard
 
