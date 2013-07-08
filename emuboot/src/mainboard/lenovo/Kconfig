@@ -1,0 +1,32 @@
+if VENDOR_LENOVO
+
+choice
+	prompt "Mainboard model"
+
+config BOARD_LENOVO_X60
+	bool "ThinkPad X60 / X60s"
+	help
+	  The following X60 series ThinkPad machines have been verified to
+	  work correctly:
+
+	    ThinkPad X60s (Model 1702, 1703)
+	    ThinkPad X60  (Model 1709)
+
+config BOARD_LENOVO_T60
+	bool "ThinkPad T60 / T60p"
+	help
+	  The following T60 series ThinkPad machines have been verified to
+          work correctly:
+
+	    Thinkpad T60p (Model 2007)
+
+endchoice
+
+source "src/mainboard/lenovo/x60/Kconfig"
+source "src/mainboard/lenovo/t60/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "Lenovo"
+
+endif # VENDOR_LENOVO

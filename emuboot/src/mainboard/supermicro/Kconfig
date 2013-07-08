@@ -1,0 +1,53 @@
+if VENDOR_SUPERMICRO
+
+choice
+	prompt "Mainboard model"
+
+config BOARD_SUPERMICRO_H8DME
+	bool "H8DME-2"
+config BOARD_SUPERMICRO_H8DMR
+	bool "H8DMR-i2"
+config BOARD_SUPERMICRO_H8DMR_FAM10
+	bool "H8DMR-i2 (Fam10)"
+config BOARD_SUPERMICRO_H8QME_FAM10
+	bool "H8QME-2+ (Fam10)"
+config BOARD_SUPERMICRO_H8SCM_FAM10
+	bool "H8SCM (Fam10)"
+config BOARD_SUPERMICRO_H8SCM
+        bool "H8SCM"
+config BOARD_SUPERMICRO_H8QGI
+	bool "H8QGI"
+config BOARD_SUPERMICRO_X6DAI_G
+	bool "X6DAi-G"
+config BOARD_SUPERMICRO_X6DHE_G2
+	bool "X6DHE-G2"
+config BOARD_SUPERMICRO_X6DHE_G
+	bool "X6DHE-G"
+config BOARD_SUPERMICRO_X6DHR_IG2
+	bool "X6DHR-iG2"
+config BOARD_SUPERMICRO_X6DHR_IG
+	bool "X6DHR-iG"
+config BOARD_SUPERMICRO_X7DB8
+	bool "X7DB8 / X7DB8+"
+
+endchoice
+
+source "src/mainboard/supermicro/h8dme/Kconfig"
+source "src/mainboard/supermicro/h8dmr/Kconfig"
+source "src/mainboard/supermicro/h8dmr_fam10/Kconfig"
+source "src/mainboard/supermicro/h8qme_fam10/Kconfig"
+source "src/mainboard/supermicro/h8scm_fam10/Kconfig"
+source "src/mainboard/supermicro/h8scm/Kconfig"
+source "src/mainboard/supermicro/h8qgi/Kconfig"
+source "src/mainboard/supermicro/x6dai_g/Kconfig"
+source "src/mainboard/supermicro/x6dhe_g2/Kconfig"
+source "src/mainboard/supermicro/x6dhe_g/Kconfig"
+source "src/mainboard/supermicro/x6dhr_ig2/Kconfig"
+source "src/mainboard/supermicro/x6dhr_ig/Kconfig"
+source "src/mainboard/supermicro/x7db8/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "Supermicro"
+
+endif # VENDOR_SUPERMICRO

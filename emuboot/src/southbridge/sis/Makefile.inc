@@ -1,0 +1,2 @@
+subdirs-$(CONFIG_SOUTHBRIDGE_SIS_SIS966) += sis966
+

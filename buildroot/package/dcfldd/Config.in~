@@ -1,6 +1,0 @@
-config BR2_PACKAGE_DCFLDD
-        bool "dcfldd"
-        help
-          dcfldd is an enhanced version of GNU dd with features useful for forensics and security.
-
-          http://dcfldd.sourceforge.net/

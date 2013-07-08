@@ -63,7 +63,7 @@ The safest way, and what we recommend to do, is to build a little ROM flasher fr
 Good instructions can be found here:
 http://www.flashrom.org/Serprog/Arduino_flasher#Improved_3.3v_version_by_Simon_Inns_.28no_issue_anymore_with_laptop_chips.29
 
-We used an arduino nano clone (3.3v <-> 5v selectable version), and flashed the ROM via a small breadboard circuit. This way, if your flashing fails you can always recover. It's also great if you are developing as you can try things that might break the ROM and know you can recover.
+We used an arduino nano clone (Meduino Nano 3.3v <-> 5v selectable version), and flashed the ROM via a small breadboard circuit. This way, if your flashing fails you can always recover. It's also great if you are developing as you can try things that might break the ROM and know you can recover.
 
 However, you can create a bootable USB device with the FIREBrick OS on it. That way you can use it to flash your BIOS.
 

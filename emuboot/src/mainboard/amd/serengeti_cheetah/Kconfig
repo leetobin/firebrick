@@ -1,0 +1,85 @@
+if BOARD_AMD_SERENGETI_CHEETAH
+
+config BOARD_SPECIFIC_OPTIONS # dummy
+	def_bool y
+	select ARCH_X86
+	select SOUTHBRIDGE_AMD_AMD8132
+	select SOUTHBRIDGE_AMD_AMD8151
+	select CPU_AMD_SOCKET_F
+	select DIMM_DDR2
+	select DIMM_REGISTERED
+	select NORTHBRIDGE_AMD_AMDK8
+	select NORTHBRIDGE_AMD_AMDK8_ROOT_COMPLEX
+	select SOUTHBRIDGE_AMD_AMD8111
+	select SOUTHBRIDGE_AMD_AMD8131
+	select SUPERIO_WINBOND_W83627HF
+	select HAVE_OPTION_TABLE
+	select HAVE_PIRQ_TABLE
+	select HAVE_MP_TABLE
+	select LIFT_BSP_APIC_ID
+	#select AP_CODE_IN_CAR
+	select SB_HT_CHAIN_UNITID_OFFSET_ONLY
+	select WAIT_BEFORE_CPUS_INIT
+	select HAVE_ACPI_TABLES
+	select BOARD_ROMSIZE_KB_512
+	select RAMINIT_SYSINFO
+	select QRANK_DIMM_SUPPORT
+	select DRIVERS_I2C_I2CMUX
+
+config MAINBOARD_DIR
+	string
+	default amd/serengeti_cheetah
+
+config DCACHE_RAM_BASE
+	hex
+	default 0xc8000
+
+config DCACHE_RAM_SIZE
+	hex
+	default 0x08000
+
+config APIC_ID_OFFSET
+	hex
+	default 0x8
+
+config MAINBOARD_PART_NUMBER
+	string
+	default "Serengeti Cheetah"
+
+config MAX_CPUS
+	int
+	default 8
+
+config MAX_PHYSICAL_CPUS
+	int
+	default 4
+
+config MEM_TRAIN_SEQ
+	int
+	default 1
+
+config SB_HT_CHAIN_ON_BUS0
+	int
+	default 2
+
+config HT_CHAIN_END_UNITID_BASE
+	hex
+	default 0x6
+
+config HT_CHAIN_UNITID_BASE
+	hex
+	default 0xa
+
+config SERIAL_CPU_INIT
+	bool
+	default n
+
+config IRQ_SLOT_COUNT
+	int
+	default 11
+
+config ACPI_SSDTX_NUM
+	int
+	default 4
+
+endif # BOARD_AMD_SERENGETI_CHEETAH

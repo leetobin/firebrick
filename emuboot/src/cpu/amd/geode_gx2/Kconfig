@@ -1,0 +1,58 @@
+##
+## This file is part of the coreboot project.
+##
+## Copyright (C) 2010 coresystems GmbH
+##
+## This program is free software; you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation; version 2 of the License.
+##
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with this program; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+##
+
+config CPU_AMD_GEODE_GX2
+	bool
+
+if CPU_AMD_GEODE_GX2
+
+config CPU_SPECIFIC_OPTIONS
+	def_bool y
+	select CACHE_AS_RAM
+
+config DCACHE_RAM_BASE
+	hex
+	default 0xc8000
+
+config DCACHE_RAM_SIZE
+	hex
+	default 0x04000
+
+config GEODE_VSA
+	bool
+	default y
+	select PCI_OPTION_ROM_RUN_REALMODE
+
+config GEODE_VSA_FILE
+	bool "Add a VSA image"
+	help
+	  Select this option if you have an AMD Geode GX2 vsa that you would
+	  like to add to your ROM.
+
+	  You will be able to specify the location and file name of the
+	  image later.
+
+config VSA_FILENAME
+	string "AMD Geode GX2 VSA path and filename"
+	depends on GEODE_VSA_FILE
+	default "gpl_vsa_gx_102.bin"
+	help
+	  The path and filename of the file to use as VSA.
+
+endif # CPU_AMD_GEODE_GX2

@@ -1,0 +1,18 @@
+README
+------
+
+This is a cross toolchain builder for -elf toolchains (ie. no libc support)
+
+known working:
+  i386-elf
+  x86_64-elf
+  powerpc-elf
+  mipsel-elf
+  armv7a-eabi
+
+known broken:
+  alpha-elf
+  arm-elf
+  powerpc64-elf
+
+

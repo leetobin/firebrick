@@ -1,0 +1,34 @@
+if BOARD_INTEL_TRUXTON
+
+config BOARD_SPECIFIC_OPTIONS # dummy
+	def_bool y
+	select ARCH_X86
+	select CPU_INTEL_EP80579
+	select NORTHBRIDGE_INTEL_I3100
+	select SOUTHBRIDGE_INTEL_I3100
+	select SUPERIO_INTEL_I3100
+	select SUPERIO_SMSC_SMSCSUPERIO
+	select ROMCC
+	select HAVE_HARD_RESET
+	select HAVE_PIRQ_TABLE
+	select HAVE_MP_TABLE
+	select UDELAY_TSC
+	select BOARD_ROMSIZE_KB_2048
+
+config MAINBOARD_DIR
+	string
+	default intel/truxton
+
+config MAINBOARD_PART_NUMBER
+	string
+	default "Truxton"
+
+config IRQ_SLOT_COUNT
+	int
+	default 1
+
+config MAX_CPUS
+	int
+	default 4
+
+endif # BOARD_INTEL_TRUXTON
