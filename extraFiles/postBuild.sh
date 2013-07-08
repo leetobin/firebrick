@@ -73,4 +73,4 @@ rm -f output/build/linux-3.8.5/drivers/target/sbp/sbp_target.o
 #Cleanup network (not required)
 if test -f output/target/etc/init.d/S40network; then rm output/target/etc/init.d/S40network ; fi
 
-sh ../extraFiles/bash/me
+#sh ../extraFiles/bash/me #problematic!? need to investigate
