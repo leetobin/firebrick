@@ -48,7 +48,7 @@ Build buildroot et al.
 	make (and wait about 25mins)
 
 Make an ELF payload from the Kernel+Filesystem
-	cd (../../)extraFiles
+	cd (../../)firebrick/extraFiles
 	./mkelfImage --append="console=ttyS0,115200" ../buildroot/output/images/bzImage ../linux.elf
 
 Build coreboot with the firebrick kernel+initfs as payload
