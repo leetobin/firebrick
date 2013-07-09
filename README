@@ -48,11 +48,11 @@ Build buildroot et al.
 	cd firebrick/buildroot
 	make (and wait about 25mins)
 
-Make an ELF payload from the Kernel+Filesystem
+Make an ELF payload from the kernel+filesystem
 	cd (../../)firebrick/extraFiles
 	./mkelfImage --append="console=ttyS0,115200" ../buildroot/output/images/bzImage ../linux.elf
 
-Build coreboot with the firebrick kernel+initfs as payload
+Build coreboot with the firebrick kernel+filesystem as payload
 	cd (../../)firebrick/coreboot
 	make (and wait about 5mins)
 
@@ -68,7 +68,7 @@ We've also added an "emuboot" folder to the repository, it will allow you to use
 
 To do this you will need an emulator (QEMU), here's how...
 
-After you have completed the steps above, build coreboot (Emulated) with the firebrick kernel+initfs as payload
+After you have completed the steps above, build coreboot (Emulated) with the firebrick kernel+filesystem as payload
 	cd (../../)firebrick/emuboot
 	make (and wait about 2mins)
 
