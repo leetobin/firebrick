@@ -1,4 +1,4 @@
-Firebrick
+Firebrick (Legacy version)
 ---
 
 Software for the open source hardware write-blocker/imager.
@@ -22,15 +22,14 @@ To build a FIREBrick you need:
 
 Note: If you want to use RAID storage, you will also need two equal-sized HDDs. 
 
-There are a few (more volitile) versions of the FIREBrick available:
+There are more versions of the FIREBrick available:
 
+*https://github.com/leetobin/firebrick3 - runs a webserver, you can connect to it via an ethernet cable and iSCSI initiator. This version doesn't require a Firewire card.
 *https://github.com/leetobin/firebrickRemote - uses a WiFi dongle, you can connect via any WiFi device.
-*https://github.com/leetobin/firebrick3 - runs a webserver, you can connect to it via an ethernet cable and iSCSI initiator.
 
 For more info visit http://digitalfire.ucd.ie/?page_id=1011
 
 Lee Tobin - leetobin@gmail.com
-
 Address 
 Room A1.10
 UCD School of Computer Science
